@@ -3,42 +3,59 @@
 *@
 @{
 }
+<br />
+<h2>Add Car Details</h2>
+<br />
 
 <form asp-action="Create">
-    <fieldset>
-      <legend>Car Details</legend>      
-      <div>
-          <label for="brand">Brand:</label>
-          <input type="text" name="brand" value=""/>
-      </div>
-      <div>
-          <label for="model">Model:</label>
-          <input type="text" name="carmodel" value=""/>
-      </div>
-      <div>
-          <label for="modelyear">Year:</label>
-          <input type="text" name="modelyear" value=""/>
-      </div>
-      <div>
-          <label for="seats">Seats:</label>
-          <input type="text" name="Seats" value=""/>
-      </div>
-      <div>
-          <label for="mileage">Mileage:</label>
-          <input type="text" name="mileage" value=""/>
-      </div>
-      <div>
-          <label for="gearbox">Gearbox:</label>
-          <input type="text" name="gearbox" value=""/>
-      </div>
-      <div>
-          <label for="price">Price:</label>
-          <input type="text" name="price" value=""/>
-      </div>
-        
-      <div>
-          <label>&nbsp;</label>
-          <input type="Submit" value="Submit" />
-      </div> 
-    </fieldset>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Brand</label>
+        <div class="col mb-6">
+            <input type="text" class="form-control" name="brand" value=""/>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Model</label>
+        <div class="col mb-6">
+            <input type="text" class="form-control" name="carmodel" value=""/>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Year</label>
+        <div class="col mb-6">
+            <input type="text" class="form-control" name="modelyear" value=""/>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Seats</label>
+        <div class="col mb-6">
+            <input type="text" class="form-control" name="Seats" value=""/>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Mileage</label>
+        <div class="col mb-6">
+            <input type="text" class="form-control" name="mileage" value=""/>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Gearbox</label>
+        <div class="col mb-6">
+            <input type="text" class="form-control" name="gearbox" value=""/>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Price</label>
+        <div class="col mb-6">
+            <input type="text" class="form-control" name="price" value=""/>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="Submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+        </div>
+    </div>
 </form>

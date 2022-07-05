@@ -5,9 +5,11 @@
 @{
 }
 <h1>Our Cars</h1>
-<h3> We have these list of cars </h3>
 @ViewData["CarInfo"]
 <div> Available Cars List...</div>
+<br />
+<a class="btn btn-primary btn-sm" href="/Cars/Create">New Car</a>
+<br />
 <table class="table table-bordered table-responsive table-hover">
     <tr>  
         <th>Car Brand</th>
@@ -17,8 +19,8 @@
         <th>Seats</th>
         <th>Gearbox Model</th>
         <th>Price</th>
-        <th>Update</th>  
-        <th>Clear</th> 
+        <th>Action</th>  
+         
 
     </tr>  
     @foreach(Cars item in Model)
@@ -32,8 +34,11 @@
             <td>@item.Seats</td>
             <td>@item.Gearbox</td>
             <td>@item.Price</td>
-            <td><a asp-action ="Edit" asp-route-id = "@item.Id">Edit</a></td>
-            <td><a asp-action ="delete" asp-route-id =" @item.Id">Delete</a></td>    
+            <td>
+                <a class="btn btn-primary btn-sm" href="/Cars/Edit?id=@item.Id">Edit</a>
+                <a class="btn btn-danger btn-sm" href="/Cars/Delete?id=@item.Id">Delete</a>               
+            </td>
+              
         </tr>
     
     }
